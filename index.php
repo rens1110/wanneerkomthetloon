@@ -66,9 +66,11 @@
 					<div>
 						<h4>Je hebt nog <?php echo ceil(($nextdate+86400-time())/86400) ?> dagen te gaan.</h4>
 					</div>
-					<div class="progress">
-						<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo time() ?>" aria-valuemin="<?php echo $previousdate+86400 ?>" aria-valuemax="<?php echo $nextdate+86400 ?>" style="width: <?php echo 100*(time()-$previousdate+86400)/($nextdate-$previousdate).'%;' ?>">
-							<span class="sr-only"></span>
+					<div class="col-md-8 col-md-offset-2">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="<?php echo time() ?>" aria-valuemin="<?php echo $previousdate+86400 ?>" aria-valuemax="<?php echo $nextdate+86400 ?>" style="width: <?php echo 100*(time()-$previousdate+86400)/($nextdate-$previousdate).'%;' ?>">
+								<span class="sr-only"></span>
+							</div>
 						</div>
 					</div>
 				</div>
