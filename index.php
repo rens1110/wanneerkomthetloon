@@ -51,13 +51,13 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="col-md-6">
-						Het volgende loon wordt uitbetaald op:
-						<h3><?php echo gmdate("d F Y", $nextdate+86400); ?></h3>
-					</div
-					<div class="col-md-6">
 						Het vorige loon was uitbetaald op:
 						<h3><?php echo gmdate("d F Y", $previousdate+86400); ?></h3>
 					</div>
+					<div class="col-md-6">
+						Het volgende loon wordt uitbetaald op:
+						<h3><?php echo gmdate("d F Y", $nextdate+86400); ?></h3>
+					</div
 				</div>
 			</div>
 			<br />
