@@ -64,7 +64,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div>
-						<h4>Je hebt nog <?php echo ceil(($nextdate+86400-time())/86400) ?> dagen te gaan.</h4>
+						<h4>Je hebt nog <?php echo ceil(($nextdate+7200-time())/86400) ?> dagen te gaan.</h4>
 					</div>
 					<div class="col-md-8 col-md-offset-2">
 						<div class="progress">
