@@ -87,10 +87,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row-fluid">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<h3> Betalingsgeschiedenis </h3>
-					<img src="barplot.php" class="img-responsive">
+				</div
+				<div class="col-md-8 col-md-offset-2 text-center">	
+					<img src="barplot.php" class="img-responsive center-block">
+				</div>
+				<div class="col-md-8 col-md-offset-2 text-center">	
 					<br />
 					<?php 
 						$payments = mysqli_query($conn,"SELECT * FROM data WHERE payed = 1");
