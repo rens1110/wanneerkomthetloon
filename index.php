@@ -116,5 +116,11 @@
 				</div>
 			</div>
 		</div>
+		<div style="padding:100px">   </div>
+		<div class="navbar">
+            <div class="container-fluid">
+                <a href="/"><p class="text-muted">&copy; Rens Werink</p></a>
+            </div>
+        </div>
 	</body>
 </html>
