@@ -64,7 +64,19 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div>
-						<h4>Je hebt nog <?php echo ceil(($nextdate+7200-time())/86400) ?> dagen te gaan.</h4>
+						<h4>Je hebt nog 
+						<?php 
+							echo ceil(($nextdate+7200-time())/86400);
+							if(ceil(($nextdate+7200-time())/86400)<2)
+								{
+									echo ' dag';
+								}
+								else
+								{
+									echo ' dagen';
+								};
+						?> 
+						te gaan.</h4>
 					</div>
 					<div class="col-md-8 col-md-offset-2">
 						<div class="progress">
@@ -73,6 +85,34 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<h3> Betalingsgeschiedenis </h3>
+					<img src="barplot.php">
+					<br />
+					<?php 
+						$payments = mysqli_query($conn,"SELECT * FROM data WHERE payed = 1");
+						$plotdatax = array();
+						$plotdatay = array();
+						foreach($payments as $payment)
+						{
+							echo '<br />';
+							$delay = ceil((strtotime($payment['payoutdate'])-strtotime($payment['date']))/(3600*24));
+							echo $payment['date'].' uitbetaald op '.$payment['payoutdate'].' ('.$delay.' dagen te laat)';
+							$plotdatax[] = $payment['date'];
+							$plotdatay[] = $delay;
+						};
+						
+						echo '<br />';
+						
+					
+						//include_once 'barplot.php';
+
+					?>
+					
+					
 				</div>
 			</div>
 		</div>
